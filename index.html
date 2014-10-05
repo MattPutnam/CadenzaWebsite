@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Cadenza MIDI Performance Manager</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="css/thickbox.css" rel="stylesheet" type="text/css"/>
+  
+  <style type="text/css">
+    .extraspace {
+       margin-top:1cm;
+    }
+  </style>
+
+  <script src="scripts/jquery-latest.js" type="text/javascript"></script>
+  <script src="scripts/thickbox.js" type="text/javascript"></script>
+  <script src="scripts/navImages.js" type="text/javascript"></script>
+  <script src="scripts/osUtil.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    function setLink() {
+      var e = document.getElementById("downloadButton");
+      var z = "";
+      if (isMacOS())
+        z = "MacOSX";
+      else
+        z = "Windows_Linux";
+      e.setAttribute("href", "assets/app/v1.0/Cadenza_"+z+".zip");
+    }
+  </script>
+</head>
+<body onload="MM_preloadImages('images/featuresover.png','images/faqsover.png','images/aboutover.png','images/contactover.png')">
+  <div class="banner">
+    <div class="innerbanner"><a href="index.html"><img src="images/logo.png"/></a></div>
+  </div>
+
+  <div class="content">
+    <div class="nav">
+      <center>
+        <br/><br/>
+        <a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/homeover.png',1)">
+          <img src="images/homeon.png" name="Image7" id="Image7"/>
+        </a>
+        <a href="features.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/featuresover.png',1)">
+          <img src="images/features.png" name="Image3" id="Image3"/>
+        </a>
+        <a href="faqs.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/faqsover.png',1)">
+          <img src="images/faqs.png" name="Image4" id="Image4"/>
+        </a>
+        <a href="about.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/aboutover.png',1)">
+          <img src="images/about.png" name="Image5" id="Image5"/>
+        </a>
+        <a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/contactover.png',1)">
+          <img src="images/contact.png" name="Image6" id="Image6"/>
+        </a>
+      </center>
+    </div>
+
+    <div class="body">
+      <p>Cadenza is a MIDI performance manager for live shows. It sits between your MIDI instruments (keyboards, drum pads, guitars, etc.)
+         and your synthesizers and controls all of the patches and their mappings. This allows you to create presets with arbitrary splits
+         and layers in the software without worrying about how to program your particular hardware.</p>
+
+      <p>Cadenza was created to manage the large number of keyboard patches used in many musicals, but is well-suited for live performances of any kind.</p>
+      
+      <p class="extraspace">Screenshots:</p>
+
+      <center>
+        <a href="images/ss1.png" class="thickbox" rel="thickbox_slide1" title="Editing a cue">           <img class="prev_ss" src="images/ss1.png"/></a>&nbsp;
+        <a href="images/ss2.png" class="thickbox" rel="thickbox_slide1" title="Viewing cues and patches"><img class="prev_ss" src="images/ss2.png"/></a>&nbsp;
+        <a href="images/ss3.png" class="thickbox" rel="thickbox_slide1" title="The performance window">  <img class="prev_ss" src="images/ss3.png"/></a>
+        <span class="texttip">Click Image to Enlarge</span>
+      </center>
+      
+      <p class="extraspace"><a id="downloadButton"><img src="images/download.png" onload="setLink()"/></a></p>
+      <p><a class="downloadLink" href="assets/app/v1.0/Cadenza_MacOSX.zip">Mac OS X</a>&nbsp;&ndash;&nbsp;<a class="downloadLink" href="assets/app/v1.0/Cadenza_Windows_Linux.zip">Other OSes</a></p>
+      <p><a href="manual/quickstart.html">Quick Start Guide</a></p>
+      
+      <p class="extraspace">Why Cadenza?</p>
+      <p>While there are other solutions available, most either cost money or are difficult to use. Cadenza is free and simple. <a href="features.html">Read More...</a></p>
+    </div>
+    <div class="footer"></div>
+  </div>
+</body>
+</html>

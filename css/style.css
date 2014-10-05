@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* CSS Document */
+
+a:link {color:#CC0000;}      /* unvisited link */
+a:visited {color:#CC0000;}  /* visited link */
+a:hover {color:black;}  /* mouse over link */
+a:active {color:#CC0000;}
+
+.downloadLink {
+  font-size:16px;
+}
+
+body {
+  background-image: url(../images/bg.jpg);
+  padding:0;
+  margin:0;
+  border:0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+img {
+  border:0;
+}
+
+.banner {
+  margin-left:auto;
+  margin-right:auto;
+  background:url(../images/banner.jpg);
+  height:121px;
+  width:100%;
+}
+
+.innerbanner {
+  padding-top:20px;
+  margin-left:auto;
+  margin-right:auto;
+  width:870px;
+}
+
+.content {
+  margin-left:auto;
+  margin-right:auto;
+  width:798px;
+}
+
+.prev_ss {
+   height:170px;
+   width:165px;
+}
+
+.texttip {
+  color:#cccccc;
+  font-size:12px;
+  font-style:italic;
+}
+
+.titles {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.faq_q {
+  color:#cc0000;
+  padding-top:20px;
+  padding-bottom:10px;
+}
+
+.faq_a {
+}
+
+.nav {
+  float:left;
+  background:url(../images/nav.png);
+  width:185px;
+  height:287px;
+}
+
+.body {
+  background:url(../images/body.png);
+  float:right;
+  width:533px;
+  padding:40px;	
+}
+
+
+.footer {
+  background:url(../images/footer.jpg);
+  width:613px;
+  height:74px;
+  float:right;	
+}

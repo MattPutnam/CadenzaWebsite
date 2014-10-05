@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Cadenza - Features</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="scripts/navImages.js"></script>
+  <style type="text/css">
+    .sectionheader {
+      font-size: 24px;
+      color: #cc0000;
+    }
+  </style>
+</head>
+<body onload="MM_preloadImages('images/featuresover.png', 'images/faqsover.png', 'images/aboutover.png', 'images/contactover.png', 'images/homeover.png')">
+  <div class="banner">
+    <div class="innerbanner"><a href="index.html"><img src="images/logo.png"/></a></div>
+  </div>
+
+  <div class="content">
+    <div class="nav">
+      <center>
+        <br/><br/>
+        <a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/homeover.png',1)">
+          <img src="images/home.png" name="Image7" id="Image7"/>
+        </a>
+        <a href="features.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/featuresover.png',1)">
+          <img src="images/featureon.png" name="Image3" id="Image3"/>
+        </a>
+        <a href="faqs.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/faqsover.png',1)">
+          <img src="images/faqs.png" name="Image4" id="Image4"/>
+        </a>
+        <a href="about.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/aboutover.png',1)">
+          <img src="images/about.png" name="Image5" id="Image5"/>
+        </a>
+        <a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/contactover.png',1)">
+          <img src="images/contact.png" name="Image6" id="Image6"/>
+        </a>
+      </center>
+    </div>
+
+    <div class="body">
+      <span class="titles">FEATURES</span>
+      <p>Cadenza is a free and simple software solution to your MIDI patching problems. Aside from the free software, all you need are:</p>
+      <ul>
+        <li>A MIDI-enabled keyboard (so pretty much any keyboard)</li>
+        <li>A computer that can run Java (so pretty much any computer)</li>
+        <li>A MIDI interface (you can get a simple MIDI-to-USB cable for around $40)</li>
+        <li>A synthesizer (the only significant cost&mdash;although used synthesizers can often be found for only a few hundred dollars.
+            See the <a href="faqs.html">FAQ</a> for hardware recommendations)</li>
+      </ul>
+
+      <span class="sectionheader">Cues and triggers:</span>
+
+      <p>Cadenza can support any number of presets (called "cues") with arbitrarily complicated layers and splits&mdash;the only limit is the
+         number of parts on your synthesizer. Most digital synthesizers have at least 16 parts, which is enough for almost any job. In addition
+         to simply assigning patches to regions of keyboards, patches can also transpose, play entire chords off of single keys, use an arpeggiator,
+         and more!</p>
+      <p>In addition to these patch options, Cadenza can be set up to trigger many kinds of events off of any input. This input can be a note on the
+         instrument, or any pedal or button on the instrument that sends a MIDI signal. Most commonly, an unused button, extra pedal (perhaps
+         plugged into an unused expression input) or an unused key on the keyboard is set to advance to the next cue. However, these triggers
+         can be configured per cue, so you can have each cue automatically advance to the next when a certain note is played.</p>
+      <p>Beyond that, triggers can be set up to jump to any cue in the show, go back a cue (in case a cue was advanced mistakenly), send
+         MIDI sysex commands, or perform a number of complex actions. These can be used to control many types of hardware, including effects units,
+         lighting boards, and digital mixers. With the right equipment, you can have events in the music controlling all aspects of your performance!</p>
+
+      <span class="sectionheader">Support for any kind of hardware:</span>
+
+      <p>Cadenza doesn't care what kind of keyboard you have, as long as it sends MIDI. It doesn't need to have lots of built-in sounds, lots of
+         sliders and knobs, or the ability to split into zones&mdash;it just listens to the notes being played and does the magic on its end. For
+         this reason, just about any keyboard will do, even the cheapest MIDI controllers. No need for anything specialized or fancy. Cadenza
+         also doesn't care what kind of instrument is generating the MIDI and is perfectly suited for managing drum pads, MIDI guitars and basses,
+         wind controllers, or anything else you might have.</p>
+      <p>Cadenza is also ready to work with just about any synthesizer out there. It comes preconfigured to support the most common models, and
+         can easily be extended to support more by adding delegate files that tell Cadenza how to operate it. See the <a href="faqs.html">FAQ</a> for more information.</p>
+
+      <span class="sectionheader">Find your hardware patches quickly and easily:</span>
+
+      <p>No need to scroll through hundreds of presets on your synth module looking for the right string sound. Cadenza provides a simple
+         interface for searching through your synth module's patches and previewing them. And if you decide to add an expansion card or swap out
+         the module entirely, it's easy to replace all usages of an old patch with a new one.</p>
+
+      <span class="sectionheader">Rehearsals made easy:</span>
+
+      <p>Traditionally, performers work with hardware synths by programming the presets directly onto the module itself. Not only is this
+         laborious to preset, but it's a pain to scroll through to a particular spot when rehearsing. Cadenza can simply jump to any spot in the show instantly.</p>
+    </div>
+    <div class="footer"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+  background: white;
+}
+
+p {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.title {
+  color: #cc0000;
+  margin: 40px;
+  font-size: 24px;
+}
+
+h1 {
+  color: #cc0000;
+  margin: 20px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section {
+  
+}
+
+.caption {
+  font-size:16px;
+  font-style:italic;
+}
+
+.ref {
+  font-family: "Courier New";
+}
+
+.term {
+  font-style:italic;
+}

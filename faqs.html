@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Cadenza - Frequently Asked Questions</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="scripts/navImages.js"></script>
+</head>
+<body onload="MM_preloadImages('images/featuresover.png', 'images/faqsover.png', 'images/aboutover.png', 'images/contactover.png', 'images/homeover.png')">
+  <div class="banner">
+    <div class="innerbanner"><a href="index.html"> <img src="images/logo.png"/></a></div>
+  </div>
+
+  <div class="content">
+    <div class="nav">
+      <center>
+        <br/><br/>
+        <a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/homeover.png',1)">
+          <img src="images/home.png" name="Image7" id="Image7"/>
+        </a>
+        <a href="features.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/featuresover.png',1)">
+          <img src="images/features.png" name="Image3" id="Image3"/>
+        </a>
+        <a href="faqs.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/faqsover.png',1)">
+          <img src="images/faqson.png" name="Image4" id="Image4"/>
+        </a>
+        <a href="about.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/aboutover.png',1)">
+          <img src="images/about.png" name="Image5" id="Image5"/>
+        </a>
+        <a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/contactover.png',1)">
+          <img src="images/contact.png" name="Image6" id="Image6"/>
+        </a>
+      </center>
+    </div>
+
+    <div class="body">
+      <span class="titles">FAQS</span>
+
+      <div class="faq_q">How do I use a pedal to trigger an event?</div>
+      <div class="faq_a">If your keyboard has a spare pedal input, it's probably possible to use it directly. Plug the pedal in, open the
+                         Input Monitor (Control | Show Input Monitor), see what kinds of signals it's sending, and set up a global trigger
+                         to work with those. If you're out of pedal inputs or can't set the keyboard to send a usable signal, you can use
+                         a pedal box from <a href="http://www.midisolutions.com/">MIDI Solutions</a> to cause the pedal to trigger any note.
+                         A common thing to do is to set it to send a note beyond the range of your keyboard (for example, C#8). Even if
+                         Cadenza isn't set to ever play anything with that note, it will still receive the MIDI message and can work with it.</div>
+
+      <div class="faq_q">How do I get Cadenza to use a synthesizer that isn't listed?</div>
+      <div class="faq_a">Cadenza uses plain text files to define synthesizers, their built-in and expansion patch banks, and the commands
+                         necessary to switch patches. See the manual for the full specifications of these files, or take a look in the
+                         resources folder to see how the existing ones work. If you're not comfortable doing this, send an email to
+                         <a href="mailto:support@cadenzasoftware.com">support@cadenzasoftware.com</a> and we'll be happy to do it for you.
+                         If you write your own and it works, send it to us so we can include it in future releases.</div>
+
+      <div class="faq_q">What keyboards do you recommend?</div>
+      <div class="faq_a">Anything that transmits MIDI (which is almost anything). If you're using multiple keyboards, it makes things easier
+                         if the keyboard has the standard 5-pin MIDI OUT port, as opposed to USB. If you're in need of a cheap solution, the
+                         <a href="http://www.m-audio.com/products/en_us/Keystation88es.html">M-Audio Keystation series</a> is great.</div>
+
+      <div class="faq_q">What synthesizers do you recommend?</div>
+      <div class="faq_a">The Roland JV-1080 is the classic workhorse in the industry. Many musicals have been written around it, so if you're
+                         doing one of those, it's the natural choice. They can be found used for around $200.</div>
+
+      <div class="faq_q">What MIDI interfaces do you recommend?</div>
+      <div class="faq_a">
+        <p>For a 1x1 MIDI-to-USB cable, the only thing worth getting is the
+           <a href="http://www.rolandus.com/products/productdetails.php?ProductId=1157">Roland UM-ONE</a>. Cheaper cables are unreliable in
+           unpredictable and disastrous ways&mdash;some will drop a MIDI message when too many occur at once. This is an annoyance when it's
+           a NOTE ON message that's dropped, and an embarrassing disaster if it's a NOTE OFF.</p>
+
+        <p>If you have more than one input, then you have a few options. If 16 MIDI channels will be enough, the products from
+           <a href="http://www.midisolutions.com/">MIDI Solutions</a> are a simple solution. They have several kinds of MIDI mergers which
+           could not be any easier to use&mdash;they don't even require power.</p>
+
+        <p>Another option is to use an interface with more connections, such as the ones from <a href="www.motu.com">MOTU</a>.</p>
+      </div>
+
+      <div class="faq_q">What kinds of applications is Cadenza good for?</div>
+      <div class="faq_a">Any kind of live performance by MIDI-enabled instruments. Cadenza was designed with musical theater in mind, but
+                         could easily be used for anything else. So far, it has been used with upwards of 4 keyboards simultaneously, guitar,
+                         drum pads, and <a href="http://www.alternatemode.com/malletkat_family.shtml">MalletKATs</a>.</div>
+
+      <div class="faq_q">Why not just use Apple MainStage?</div>
+      <div class="faq_a">MainStage is a good solution, but it requires two expensive things: A MacBook Pro with a lot of RAM, and good sample
+                         libraries. Computers with modest amounts of RAM easily choke when trying to load samples, causing a brief gap in
+                         response or ugly audio artifacts. Cadenza can run on just about any computer and is designed to work with hardware
+                         synths or your keyboard's own built-in sounds, eliminating the sample loading problem.</div>
+      
+      <div class="faq_q">Why not just use Max or Pure Data?</div>
+      <div class="faq_a">They offer tons of power, but are difficult to use for a musician that's not also a programmer. Cadenza offers all
+                         of the most commonly used features and is much simpler to operate.</div>
+
+      <div class="faq_q">I found a bug! Where do I report this?</div>
+      <div class="faq_a">Send an email to <a href="mailto:support@cadenzasoftware.com">support@cadenzasoftware.com</a>, and indicate if it's
+                         preventing you from using the software or is just an annoyance. You can also submit a bug through
+                         <a href="https://github.com/MattPutnam/cadenza">github</a>.</div>
+
+      <div class="faq_q">I have a great idea for a feature! Where can I make the request?</div>
+      <div class="faq_a">Send an email to <a href="mailto:support@cadenzasoftware.com">support@cadenzasoftware.com</a>. You can also submit
+                         a feature request through <a href="https://github.com/MattPutnam/cadenza">github</a>.</div>
+    </div>
+    <div class="footer"></div>
+  </div>
+</body>
+</html>

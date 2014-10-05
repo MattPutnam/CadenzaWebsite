@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Cadenza Quick Start Guide</title>
+  
+  <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/manualstyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div class="banner">
+    <div class="innerbanner"><a href="../index.html"><img src="../images/logo.png"/></a></div>
+  </div>
+  
+  <div class="title">Cadenza Quick Start Guide</div>
+  
+  <h1>Installation</h1>
+  
+  <div class="section">
+     <p>After <a href="../index.html">downloading</a>, unzip and you should find a folder called "Cadenza" containing
+        the <span class="ref">Cadenza.jar</span> application, as well as a <span class="ref">resources</span> folder
+        and a few others.  You can leave the application on your desktop, put it in your applications folder (Program
+        Files for Windows, Applications for MacOSX), or wherever&mdash;Cadenza is self-contained and doesn't rely on
+        anything else on your computer.  The only thing is that <span class="ref">Cadenza.jar</span> must be in the same
+        location as the <span class="ref">resources</span> folder.</p>
+  </div>
+  
+  <h1>Setup</h1>
+  
+  <div class="section">
+    <p>Run <span class="ref">Cadenza.jar</span> and click <span class="ref">New File...</span> to start the New File
+       wizard.  The wizard sets up the keyboards and synths to be used, and any global triggers and control overrides.
+       These can always be changed later if your setup changes.</p>
+    
+    <center>
+      <img src="images/wizard_kbds.png"/>
+      <div class="caption">The first page of the setup wizard</div>
+    </center>
+    
+    <p>A predefined 88-key keyboard (simply named "Keyboard") is already defined.  Add a second keyboard by clicking
+       the "+" icon, or edit any keyboard by double-clicking or selecting it and clicking the edit icon.  One keyboard
+       is designated the <span class="term">Main</span> keyboard.  This is merely a convenience&mdash;the main keyboard
+       is selected by default in all dialogs where a keyboard is to be selected.</p>
+    
+    <center>
+      <img src="images/edit_kbd.png"/>
+      <div class="caption">The Keyboard Edit dialog</div>
+    </center>
+    
+    <p>In the Keyboard Edit dialog, you can specify the <span class="term">Physical Range</span> and
+       <span class="term">Sounding Range</span> of the keyboard.  The physical range should be set to the actual
+       range of the keyboard, while the sounding range can be used to set aside notes at the extreme ends for use in
+       triggers.  Notes played outside the sounding range won't ever play a sound.</p>
+    
+    <p>Once you're done setting up keyboards, advance to the synthesizer page.  Here you define the synthesizers to be
+       used and which output channels they will be using.</p>
+    
+    <center>
+      <img src="images/edit_synth.png"/>
+      <div class="caption">The Synthesizer Edit dialog</div>
+    </center>
+    
+    <p>If your synthesizer is not present, it will need to be added.  <a href="mailto:support@cadenzasoftware.com">
+       Contact support</a> for assistance, or take a look in <span class="ref">resources/delegates</span> and
+       <span class="ref">resources/synthconfigs</span> to see how the existing ones work.</p>
+    
+    <p>Next up are global triggers:</p>
+    
+    <center>
+      <img src="images/edit_trigger.png"/>
+      <div class="caption">The Trigger Edit dialog</div>
+    </center>
+    
+    <p>Here you can define the trigger you want to advance to the next cue, or anything of that sort.  The top panel
+       defines the <span class="term">predicates</span>, the middle determines how the predicates are processed, and
+       the bottom defines the <span class="term">actions</span> to take, which are always done sequentially.  The image
+       shows the definition of a common way to set up an advance trigger&mdash;setting aside the top key for the task.
+       If you want to do this, it would be wise to exclude this note from the <span class="term">sounding range</span>.
+       You could also add a reverse ("go back") trigger to the bottom key similarly.</p>
+    
+    <p>At the bottom is a tool to guard against accidentally activating a trigger twice in rapid succession from a
+       twitch&mdash;simply set a number of milliseconds, and further triggering is blocked for that length of time.</p>
+    
+    <p>The last page is the global control overrides:</p>
+    
+    <center>
+      <img src="images/control_global.png"/>
+      <div class="caption">The Global Control Override dialog</div>
+    </center>
+    
+    <p>This is useful if you have a limited number of physical controls on your keyboard.  In this screenshot, the volume
+       control is mapped globally to the mod wheel, which would be useful if you had a volume slider but no mod wheel and
+       needed mod control.</p>
+  </div>
+  
+  <h1>Creating Cues</h1>
+  
+  <div class="section">
+    <p>After finishing with the setup wizard, you're brought to the main editing window.  You can edit the keyboards, global
+       triggers, and global control overrides that the wizard defined, plus global <span class="term">plugins</span> to shape
+       your sound.  You can reconfigure your synthesizers from the menu (Setup | Configure Synthesizers)</p>
+    
+    <center>
+      <img src="images/globals_toolbar.png"/>
+      <div class="caption">Buttons to edit the keyboards and global triggers, control overrides, and plugins</div>
+    </center>
+    
+    <p>To the left is the section to edit cues, and to the right is the section to edit patches.  You can start adding patches
+       now, or define them on the fly as you create cues.  Click the "+" icon above the cue section to create your first cue:</p>
+    
+    <center>
+      <img src="images/edit_cue_initial.png"/>
+      <div class="caption">Creating a new cue</div>
+    </center>
+    
+    <p>Cues contain a set of patches applied to regions of keyboards, as well as per-cue triggers, control mappings, and plugins.
+       As the label says, drag a range of notes on a keyboard to add a patch to that region, or click the button above the
+       keyboard to add a patch to the whole keyboard.  You don't have any patches defined yet, so you'll have to add one.  The
+       dialog should be self-explanatory, it lists all of the patches available on your synthesizers with a name filter.  Enter
+       an alternate name if the default name is silly (for example, you might want to rename Roland's "128voicePno" to "Piano")</p>
+    
+    <p>Below that, you can add triggers, control overrides, and plugins for just the given cue.  Plugins are modeled after typical
+       audio production plugins, but operate on the MIDI signals.  Compressors are useful if you're using light keys that make it
+       easy to accidentally slam them, and equalizers are useful if a particular patch has a weird spectrum.</p>
+    
+    <p>These three sections can also disable the globals for the current cue.  This may be useful if you want to use the top key
+       as the advance button most of the time, but actually need that note just in one place.</p>
+    
+    <p>Each cue also has a Song and Measure, which must be unique.  Song and measure numbers can be numbers, letters, or combinations
+       with the number first (e.g., "2A").  A letter without a number has an implicit "0" before it, and numbers come first.  That is,
+       A &rarr; B &rarr; 1 &rarr; 1A &rarr; 2, etc.</p>
+    
+    <p>Back on the main window, there's also a "clone" button for easily creating identical or very similar cues in different parts
+       of your performance.  It creates a new cue that is pre-populated with the contents of the selected cue.</p>
+  </div>
+  
+  <h1>Editing Patches</h1>
+  
+  <div class="section">
+    <p>You can define patches outside of a cue, or edit existing patches in the patch edit section to the right.  Click on the "+"
+       icon to create a patch from scratch, or the select icon to the right to pick from a list like in the Cue Edit dialog.  You
+       can also replace all instances of a selected patch with another patch with the rightmost button.</p>
+    
+    <p>If you swap out synthesizers, you will be prompted to replace all of the patches for which an exact match wasn't found
+       (which is probably all of them).  The dialog attempts to make suggestions based on a really broken algorithm, but I think
+       it's funny so it's staying like that for now :)</p>
+  </div>
+  
+  <h1>MIDI Setup</h1>
+  
+  <div class="section">
+    <p>You will also need to select the MIDI interface(s) being used.  This is done in the menu: Setup | Input and Setup | Output.
+       There is unfortunately a bug in the Java MIDI implementation for Mac OS X that prevents the system from refreshing the list
+       of available MIDI devices after that list has been retrieved once, so if you didn't have your interface plugged in when you
+       started Cadenza, you'll need to save, quit, plug it in, and launch Cadenza again.  Sorry :(</p>
+  </div>
+  
+  <h1>Performing</h1>
+  
+  <div class="section">
+    <p>With a patch selected on the right, all keyboards will play that patch for all notes in the sounding range (Preview mode).
+       With a cue selected on the left, the performance will proceed as defined (Perform mode), with all keyboard assignments,
+       triggers, etc.</p>
+    
+    <p>For a true performance scenario, use the Control Window (Control | Show Control Window):</p>
+    
+    <center>
+      <a href="images/control_window.png"><img src="images/control_window.png" style="width:800px; height=auto"/></a>
+      <div class="caption">The Control Window</div>
+    </center>
+    
+    <p>The Control Window is blacked out to reduce glare in orchestra pits, and provides a quick display of the current spot in the
+       show and the current patch assignments.  There are controls at the bottom left to advance, reverse, go to any cue, or go to
+       the beginning of the show.  The "Panic" button silences all sound, useful if a note gets stuck on.  The "Close" button closes
+       the window.  In the bottom right is a quick view of the Metronome.</p>
+  </div>
+</body>
+</html>
